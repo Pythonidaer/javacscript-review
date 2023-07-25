@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <h1>Modules in JavaScript</h1>
+    <p>There are 2 main ones in JavaScript</p>
+    <ol>
+      <li>
+        <strong>CommonJS:</strong><br />
+        <p>
+          CommonJS is a module specification that was primarily used in
+          server-side environments like Node.js before ECMAScript Modules (ES
+          Modules) were introduced. The CommonJS format uses require() to import
+          modules and module.exports or exports to export functionality from a
+          module.
+        </p>
+        <p>
+          One of the main drawbacks of CommonJS is that it's synchronous,
+          meaning the modules are loaded and executed synchronously, which could
+          cause performance issues in certain scenarios.
+        </p>
+      </li>
+      <li>
+        <strong>ECMAScript Modules:</strong><br />
+        <p>
+          ECMAScript Modules, also known as ES Modules or simply import/export,
+          are the standard module system introduced in ECMAScript 6 (ES6) in
+          2015. Unlike CommonJS, ES Modules are natively supported in modern
+          browsers and Node.js versions, making them more widespread.
+        </p>
+        <p>
+          To use ES Modules in a JavaScript file, you need to use the
+          <em>import</em> statement to <em>import</em> functionality from other
+          modules and the <em>export</em> keyword to
+          <em>export</em> functionality from a module.
+        </p>
+      </li>
+    </ol>
+    <h2>Summary</h2>
+    <p>
+      In summary, CommonJS and ECMAScript Modules are both used to organize and
+      manage code in JavaScript, but ES Modules have become the standard due to
+      better performance, native support, and static analysis capabilities. When
+      working with modern JavaScript projects, you'll likely come across ES
+      Modules more frequently.
+    </p>
+  </body>
+</html>

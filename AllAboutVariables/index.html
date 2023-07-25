@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      code {
+        white-space: pre-wrap;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+      pre {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>What are Variables?</h1>
+    <p>Variables are containers for values.</p>
+
+    <h2>Block Scoping</h2>
+    <p>
+      In JavaScript, block scopes are created by different control structures
+      and declarations that define blocks of code. here are some examples of
+      different block scopes within JavaScript:
+    </p>
+
+    <h4>If Statement:</h4>
+    <pre><code>
+        if (true) {
+          // This is a block scope created by the if statement
+          const message = "Hello, block scope!";
+          console.log(message); // Outputs "Hello, block scope!"
+        }
+        
+        // console.log(message); // This would result in an error because 'message' is not accessible here.
+          </code></pre>
+
+    <h4>For Loop:</h4>
+    <pre><code>
+        for (let i = 0; i < 3; i++) {
+            // This is a block scope created by the for loop
+            console.log(i); // Outputs 0, 1, 2
+          }
+          
+          // console.log(i); // This would result in an error because 'i' is not accessible here.
+          
+    </code></pre>
+
+    <h4>While Loop:</h4>
+    <pre><code>
+        let count = 0;
+        while (count < 3) {
+            // This is a block scope created by the while loop
+            console.log(count); // Outputs 0, 1, 2
+            count++;
+        }
+
+        // console.log(count); // This would result in an error because 'count' is not accessible here.
+
+    </code></pre>
+
+    <h4>Functions:</h4>
+    <pre><code>
+        function greet() {
+            // This is a block scope created by the function
+            const greeting = "Hello, function block!";
+            console.log(greeting); // Outputs "Hello, function block!"
+          }
+          
+          greet();
+          // console.log(greeting); // This would result in an error because 'greeting' is not accessible here.
+          
+    </code></pre>
+
+    <h4>ES6 Block with Let/Const Declarations</h4>
+    <pre><code>
+        {
+            // This is a block scope created by the curly braces
+            let x = 10;
+            const y = 20;
+            console.log(x + y); // Outputs 30
+          }
+          
+          // console.log(x); // This would result in an error because 'x' is not accessible here.
+          // console.log(y); // This would result in an error because 'y' is not accessible here.
+          
+    </code></pre>
+
+    <h4>Try-Catch Block:</h4>
+    <pre><code>
+        try {
+            // This is a block scope created by the try block
+            const result = 10 / 0; // This will throw an error (division by zero)
+            console.log(result); // This will not be executed
+          } catch (error) {
+            // This is a block scope created by the catch block
+            console.error("Error occurred:", error); // Outputs "Error occurred: [Error message]"
+          }
+          
+          // console.log(result); // This would result in an error because 'result' is not accessible here.
+          // console.log(error); // This would result in an error because 'error' is not accessible here.
+          
+    </code></pre>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>

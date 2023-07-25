@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <h1>ESLint</h1>
+    <p>
+      ESLint is a popular open-source static code analysis tool for JavaScript.
+      It is used to identify and report patterns or code practices in your
+      JavaScript code that might be problematic, inconsistent, or prone to
+      errors. ESLint checks your code against a set of configurable rules and
+      provides feedback on potential issues, violations of coding standards, and
+      best practices.
+    </p>
+    <p>
+      Here are some key reasons why you should consider using ESLint in your
+      JavaScript projects:
+    </p>
+    <ol>
+      <li>
+        <strong>Code Quality Improvement:</strong> ESLint helps maintain
+        consistent and high-quality code across your project. It enforces coding
+        standards and style guidelines, reducing the chances of introducing bugs
+        and improving overall code readability.
+      </li>
+      <li>
+        <strong>Error Prevention:</strong>ESLint can catch common programming
+        errors, such as typos, undeclared variables, and incorrect use of
+        language features. By identifying these issues early, you can prevent
+        them from causing runtime errors or unexpected behavior.
+      </li>
+      <li>
+        <strong>Customizable Rules:</strong> ESLint allows you to configure and
+        customize rules based on your project's specific requirements. You can
+        enable, disable, or modify rules to suit your team's coding standards
+        and preferences.
+      </li>
+      <li>
+        <strong>Integration with Development Tools:</strong> ESLint integrates
+        seamlessly with code editors and build systems. Many modern code editors
+        (e.g., Visual Studio Code) have ESLint extensions that provide real-time
+        feedback and highlighting of issues as you write code.
+      </li>
+      <li>
+        <strong>Enforce Best Practices:</strong> ESLint encourages the adoption
+        of best practices in your JavaScript code. It helps you identify
+        anti-patterns and provides suggestions for better alternatives, leading
+        to more maintainable and performant code.
+      </li>
+      <li>
+        <strong>Automated Code Reviews:</strong> Incorporating ESLint into your
+        development workflow allows you to automate code reviews. This saves
+        time and effort, as developers can receive feedback on potential issues
+        instantly, rather than waiting for manual code reviews.
+      </li>
+      <li>
+        <strong>Team Collaboration:</strong> ESLint promotes consistency and
+        collaboration within development teams. All team members follow the same
+        coding standards, making it easier to read, understand, and contribute
+        to each other's code.
+      </li>
+      <li>
+        <strong>ESNext Support:</strong> ESLint supports the latest ECMAScript
+        (ESNext) features, allowing you to adopt modern JavaScript syntax and
+        features while ensuring code quality and compatibility.
+      </li>
+      <li>
+        <strong>Community and Extensibility:</strong> ESLint has a large and
+        active community, providing ongoing support and regular updates.
+        Additionally, you can extend ESLint with custom plugins and share them
+        with the community, allowing you to tailor it to your project's unique
+        needs.
+      </li>
+    </ol>
+    <!--  -->
+    <h2>Synchronous Code</h2>
+    <p>Executed Sequentially, one line after another</p>
+    <br />
+    <p>
+      Asynchronous programming in JavaScript became more important with the rise
+      of web development and the need for handling non-blocking operations like
+      fetching data from servers or handling user interactions without freezing
+      the UI.
+    </p>
+
+    <h4>setTimeout</h4>
+    <p>
+      A function in JavaScript that allows you to schedule the execution of a
+      function after a specified delay (in ms). It is a simple way to introduce
+      asynchrony into your code
+    </p>
+    <h4>setInterval</h4>
+    <p>
+      Another function that repeatedly executes a function with a fixed interval
+      between each execution
+    </p>
+
+    <h2>Event Loop</h2>
+    <p>
+      The Event Loop is responsible for managing asynchronous tasks and ensuring
+      that they are executed efficiently. Here's how it works:
+    </p>
+    <ol>
+      <li>
+        <strong>Main Thread Execution:</strong> JavaScript code runs on the main
+        thread and processes tasks synchronously, one after another.
+      </li>
+      <li>
+        <strong>Asynchronous Operations:</strong> When an asynchronous operation
+        (e.g., an API request) is encountered, JavaScript does not block the
+        main thread waiting for the operation to complete. Instead, it delegates
+        the operation to the browser (in the case of web browsers) or the
+        environment (in the case of Node.js).
+      </li>
+      <li>
+        <strong>Callback Queue:</strong> Once the asynchronous operation is
+        completed, the result is placed in the Callback Queue (also known as the
+        Task Queue). This queue contains callback functions that should be
+        executed as soon as the main thread is free.
+      </li>
+      <li>
+        <strong>Event Loop:</strong> The Event Loop continuously checks the
+        Callback Queue. If the main thread is idle (i.e., there are no
+        synchronous tasks being executed), the Event Loop picks the first task
+        from the Callback Queue and executes its corresponding callback
+        function.
+      </li>
+    </ol>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>

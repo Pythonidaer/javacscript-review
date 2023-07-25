@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <p>
+      Chrome DevTools is a powerful set of tools that allows you to inspect,
+      debug, and profile your JavaScript code in real-time. To debug issues with
+      your JavaScript code, follow these steps:
+    </p>
+    <ol type="a">
+      <li>
+        Open DevTools: Press F12 or right-click on the webpage and select
+        "Inspect" from the context menu. You can also use Ctrl + Shift + I (or
+        Cmd + Option + I on macOS) to open it.
+      </li>
+      <li>
+        Navigate to the "Sources" tab: In DevTools, go to the "Sources" tab to
+        see the list of all loaded scripts.
+      </li>
+      <li>
+        Set breakpoints: Click on the line number of the code where you want to
+        pause the execution (you'll see a blue marker). When the code runs and
+        reaches that point, it will pause, and you can inspect variables, step
+        through the code, and see what's going wrong.
+      </li>
+      <li>
+        Inspect variables and call stack: While the code is paused, you can
+        hover over variables to see their values, view the call stack to
+        understand the function call hierarchy, and use the control buttons
+        (step into, step over, step out) to navigate through the code.
+      </li>
+      <li>
+        Console: You can also use the Console tab to execute JavaScript commands
+        directly and inspect any logged output or errors.
+      </li>
+    </ol>
+    <h2>Debugging Memory Leaks</h2>
+    <p>
+      Memory leaks can be challenging to debug but using Chrome DevTools can
+      make it easier to identify the cause. Here are the steps to help you debug
+      memory leaks:
+    </p>
+    <ol type="a">
+      <li>
+        Take heap snapshots: Go to the "Memory" tab in DevTools and click the
+        "Take snapshot" button to capture the heap's current state.
+      </li>
+      <li>
+        Compare snapshots: Interact with your web application and perform
+        actions that you suspect might cause memory leaks. Take additional
+        snapshots after each interaction.
+      </li>
+      <li>
+        Compare heap snapshots: After taking multiple snapshots, select two
+        snapshots to compare and click the "Comparison" button. DevTools will
+        highlight the objects that increased in memory usage between the two
+        snapshots, helping you identify potential leaks.
+      </li>
+      <li>
+        Retaining paths: For each suspicious object, you can use the "Retaining
+        Paths" feature to see what's keeping that object in memory, helping you
+        pinpoint the cause of the leak.
+      </li>
+    </ol>
+    <h2>Debugging Performance</h2>
+    <p>
+      To optimize the performance of your JavaScript code, DevTools provides
+      several tools:
+    </p>
+    <ol type="a">
+      <li>
+        Performance Profiler: Go to the "Performance" tab and click the record
+        button to start profiling. Interact with your web application to capture
+        performance data. After stopping the recording, you'll get a detailed
+        breakdown of CPU usage, loading times, and bottlenecks.
+      </li>
+      <li>
+        Network Panel: The "Network" tab helps you analyze network requests,
+        response times, and potential issues that might affect the performance
+        of your web application.
+      </li>
+      <li>
+        Audits: The "Audits" tab allows you to run automated tests and get
+        suggestions for improving performance, accessibility, and other best
+        practices.
+      </li>
+    </ol>
+    <p>
+      Remember, using these tools effectively requires practice and familiarity,
+      so don't hesitate to experiment and explore different features in Chrome
+      DevTools to become proficient at debugging JavaScript issues, memory
+      leaks, and performance bottlenecks. Happy debugging!
+    </p>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>

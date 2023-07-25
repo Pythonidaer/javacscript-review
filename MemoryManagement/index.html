@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <h1>Memory Management in JavaScript</h1>
+    <p>
+      Memory management is a critical aspect of any programming language,
+      including JavaScript. It refers to the process of allocating and
+      deallocating memory to store data and execute code efficiently. JavaScript
+      uses a memory management system that automatically handles memory
+      allocation and deallocation, known as "Garbage Collection."
+    </p>
+    <h2>Memory Lifecycle in JavaScript</h2>
+    <p>
+      In JavaScript, the memory lifecycle involves several stages when dealing
+      with data:
+    </p>
+    <ol>
+      <li>
+        Allocation: When you create a variable or an object, memory is allocated
+        to store its data. For example, when you declare a variable like
+        <code>let x = 10;</code>, memory is allocated to store the value 10.
+      </li>
+      <li>
+        Usage: During the execution of your code, you can read and modify the
+        values stored in variables and objects. These operations occur in the
+        allocated memory space.
+      </li>
+      <li>
+        De-allocation: When a variable or object is no longer needed or goes out
+        of scope, it becomes eligible for memory deallocation. This means the
+        memory it occupies can be released and made available for other data.
+      </li>
+    </ol>
+    <h2>Garbage Collection</h2>
+    <p>
+      Garbage collection is the process of automatically reclaiming memory that
+      is no longer in use or unreachable in a JavaScript program. When objects
+      or variables are no longer referenced or reachable from the execution
+      context, they are considered "garbage," as they serve no purpose in the
+      program.
+    </p>
+    <p>
+      The JavaScript engine periodically performs garbage collection to find and
+      clean up this unused memory. The exact algorithms and timings for garbage
+      collection can vary between different JavaScript engines (e.g., V8 in
+      Chrome, SpiderMonkey in Firefox). However, most engines use a combination
+      of techniques to manage memory efficiently, such as:
+    </p>
+    <ol>
+      <li>
+        Reference Counting: This technique keeps track of the number of
+        references to an object. When the reference count drops to zero, meaning
+        no variables or objects reference it, the memory associated with the
+        object is freed.
+      </li>
+      <li>
+        Mark and Sweep: This is a more common garbage collection algorithm. It
+        involves two main steps: marking and sweeping.
+
+        <ul>
+          <li>
+            Mark: The garbage collector marks all the objects that are still
+            reachable from the root context (global variables, function scopes,
+            etc.). Any objects not marked are considered garbage.
+          </li>
+          <li>
+            Sweep: Once all reachable objects are marked, the garbage collector
+            sweeps through the memory, releasing the memory occupied by unmarked
+            (garbage) objects.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
